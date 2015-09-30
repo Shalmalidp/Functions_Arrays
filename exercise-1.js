@@ -23,6 +23,12 @@
 // Q1
 // Write a function called `sum` that takes two
 // parameters and returns the sum of those 2 numbers.
+var num1, num2;
+
+var sum=function(num1,num2)
+{
+  return num1 +num2;
+}
 
 
 
@@ -31,6 +37,9 @@
 // Write a function named `avg` that takes 3 parameters
 // and returns the average of those 3 numbers.
 
+var avg = function(num1, num2, num3){
+return ((num1+num2+num3) / 3);
+}
 
 
 
