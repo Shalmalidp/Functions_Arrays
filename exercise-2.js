@@ -53,46 +53,71 @@ isVowel('p');
 
 // ---------------------
 // Write a function translate() that will translate a text into "rÃ¶varsprÃ¥ket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
-// ---------------------
+// ---------------------c
+
+var myarray=[];
+var newarray=[];
+var str;
 
 function rovarspraket(phrase){
-    var myarray= phrase.split("");
+    myarray= phrase.split("");
     myarray.forEach(function(i){
         if ((i==="a")||(i==="e")||(i==="i")||(i==="o")||(i==="u")){
-        i=i;
-        return i;
-   }
-   else { 
-    i = 'o' + i + 'o' ;
-    return i;
-  }
- } //end } for forEach
+        newarray.push(i);
+          }
+          else { 
+                  i = '#' + i + '@' ;
+                  newarray.push(i);
+                }
+ } )//end } for forEach
+str = newarray.join([separator = ',']);
+return str;
 }
-);
 
 
 // ---------------------
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
 // ---------------------
+var myarray=[];
+var str1;
 
-function reverse(){
-    //...
+function reverse(str){
+  myarray=(str.split("").reverse(""));
+  str1 = myarray.join([separator = ',']);
+   return str1;
 }
-
 // ---------------------
 // Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
 // ---------------------
+//NOT SURE WITH THIS CODE
+
+var words=[];
+// var initialword,longest,nextword;
 
 function findLongestWord(words){
-    //...
+  var intialword = words.reduce(function(longest,nextword){
+      if (nextword.length > longest.length)
+          {
+            return nextword;
+          }//if loop
+          else
+          {
+            return longest;
+          }
+
+  });//for each loop and function within.
+return initialword.length;
 }
+
+//ERROR :Uncaught TypeError: Cannot read property 'length' of undefined(…)
 
 // ---------------------
 // Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
 // ---------------------
+obj longwords={};
 
 function filterLongWords(words, i){
-    //...
+    words.filter(function(longwords.length > i))
 }
 
 // ---------------------
